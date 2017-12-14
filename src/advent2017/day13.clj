@@ -1,4 +1,5 @@
-(ns advent2017.day13)
+(ns advent2017.day13
+  (:require [net.cgrand.xforms :as x]))
 
 (defn part1 [input]
   (transduce
