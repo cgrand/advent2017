@@ -29,5 +29,5 @@
             (assoc banks selected-bank 0)
             (range (inc selected-bank) (+ (inc selected-bank) cells)))]
       (if-some [i (prev-index banks')]
-        (- n i)
+        (- n i -1)
         (recur banks' prev-index (inc n))))))
