@@ -28,6 +28,6 @@
                           (recur (into members new) (-> todo (disj id) (into new))))
                         members)))]
     (loop [n 0 m m]
-      (if-some [id (key (first m))]
+      (if-some [id (first (keys m))]
         (recur (inc n) (reduce dissoc m (reachable id)))
         n))))
